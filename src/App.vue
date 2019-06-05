@@ -1,28 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <navbar-header></navbar-header>
+    <about-me></about-me>
+    <my-desc></my-desc>
+    <my-skills></my-skills>
+    <my-projects></my-projects>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navbar from "./components/header/navbar.vue";
+import myTag from "./components/myself/headline.vue";
+import myself from "./components/myself/myIntro.vue";
+import skills from "./components/myself/skills.vue";
+import project from "./components/projects/project.vue";
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    navbarHeader: navbar,
+    aboutMe: myTag,
+    myDesc: myself,
+    mySkills: skills,
+    myProjects: project
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Kalam|Raleway");
+
+$primary-clr: #b2fdb3;
+$primary-bg-clr: rgba(178, 253, 179, 0.9);
+$secondary-clr: #22b14c;
+$secondary-bg-clr: rgba(34, 177, 77, 0.95);
+$clr-dark: #272727;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: whitesmoke;
 }
 </style>
