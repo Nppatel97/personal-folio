@@ -6,7 +6,7 @@
         <img src="../../assets/meImg.jpg" alt="My image" height="150" width="150">
       </div>
       <div class="desc">
-        Passionate Web Developer with experience in Front End Web tools like HTML5, CSS/SASS, JavaScript, Vue, React and Java
+        Passionate Web Developer with experience in Web Dev tools like HTML5, CSS/SASS, JavaScript, Vue, React and Java
         <br>
         <br>
         <a href="https://github.com/Nppatel97">
