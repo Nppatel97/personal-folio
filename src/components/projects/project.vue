@@ -8,7 +8,7 @@
         vId="1"
         name="Personal Folio"
         :img="personal"
-        link="https://www.murrayvillephysio.ca/"
+        link="https://github.com/Nppatel97/personal-folio"
       >
         <div class="toolsAndLink">
           <p>
