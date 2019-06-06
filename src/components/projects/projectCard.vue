@@ -11,18 +11,20 @@
       <p>
         <slot></slot>
       </p>
-      <button class="btn">
-        <div>
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </button>
+      <a :href="`${this.link}`" target="_blank">
+        <button class="btn">
+          <div>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </button>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["vId", "name", "img"],
+  props: ["vId", "name", "img", "link"],
   data() {
     return {
       bgImg: `url(${this.img}) no-repeat`
@@ -53,8 +55,8 @@ export default {
     padding: 1em;
     padding-bottom: 2em;
     background: white;
-    transform: scale(0, 0) translateX(-130px);
-    transform-origin: bottom right;
+    transform: scale(1, 0) translateY(-50px);
+    transform-origin: top;
     transition: 0.3s ease-in-out;
   }
 
@@ -97,9 +99,24 @@ export default {
   padding-left: 5em;
 }
 
+.card-body:hover .project-name {
+  transform: scale(1, 1);
+}
+
 .num-img {
   display: inline-flex;
   overflow: hidden;
+}
+
+.number {
+  background: transparent;
+  padding: 0.5em 1em;
+  width: 100%;
+  z-index: 5;
+  color: white;
+  font-size: 50px;
+  font-weight: 1000;
+  transition: 0s ease-in;
 }
 
 .card-body:hover .number {
@@ -124,12 +141,8 @@ export default {
   opacity: 1;
 }
 
-.card-body:hover .project-name {
-  transform: scale(1, 1);
-}
-
 .card-body:hover p {
-  transform: scale(1, 1) translateX(0);
+  transform: scale(1, 1) translateY(0);
 }
 
 .card-body:hover button {
@@ -137,22 +150,8 @@ export default {
   opacity: 1;
 }
 
-.number {
-  background: transparent;
-  padding: 0.5em 1em;
-  width: 100%;
-  z-index: 5;
-  color: white;
-  font-size: 50px;
-  font-weight: 1000;
-  transition: 0s ease-in;
-}
-
 .upside {
   transform: rotate(180deg);
   transition: transform 0.5 cubic-bezier(1, 0, 0, 1);
-}
-
-@media (min-width: 880px) {
 }
 </style>

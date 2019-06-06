@@ -1,8 +1,10 @@
 <template>
   <div id="header" :style="{backgroundColor: bgColor}">
     <div class="logo">
-      <img src="../../assets/npLogo.png" class="img" width="50" height="50">
-      <h1>Nisarg Patel</h1>
+      <a href="#">
+        <img src="../../assets/npLogo.png" class="img" width="50" height="50">
+        <h1>Nisarg Patel</h1>
+      </a>
     </div>
 
     <input type="checkbox" id="navToggle" class="navi-toggle">
@@ -53,7 +55,7 @@ export default {
     handleScroll() {
       this.scrolled = window.scrollY > 10;
       this.scrolled
-        ? (this.bgColor = "rgba(39, 39, 39, 0.9)")
+        ? (this.bgColor = "rgba(39, 39, 39, 1)")
         : (this.bgColor = "transparent");
       // console.log(this.scrolled);
     }
@@ -92,15 +94,20 @@ $clr-dark: #272727;
   }
 }
 
-.transp {
-  background: $secondary-bg-clr;
-}
-
 .logo {
   position: relative;
-  display: inline-flex;
   align-items: center;
   padding: 1em;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    all: unset;
+    display: inline-flex;
+    &:hover {
+      color: whitesmoke;
+    }
+  }
 }
 
 nav {
@@ -108,7 +115,7 @@ nav {
   text-align: right;
   top: 100%;
   left: 0;
-  background: $secondary-bg-clr;
+  background: linear-gradient(to bottom, $clr-dark, $secondary-bg-clr);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;

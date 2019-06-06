@@ -58,7 +58,7 @@ export default {
 $burly-dark: rgb(190, 128, 46);
 
 #skills {
-  padding: 2rem 0.5rem;
+  padding: 2rem 1rem;
   text-align: center;
   position: relative;
   width: 100%;

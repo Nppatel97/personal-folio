@@ -6,38 +6,95 @@
         class="p-one"
         :class="{'animate-pro-cards': scrolled}"
         vId="1"
-        name="murrayville"
-        :img="murrayImg"
-      >Wellll helllloooo</pro-card>
+        name="Personal Folio"
+        :img="personal"
+        link="https://www.murrayvillephysio.ca/"
+      >
+        <div class="toolsAndLink">
+          <p>
+            <strong>Tools used</strong>
+            <br>Vue.js v3, Webpack, Hosted on GitHub
+          </p>
+          <p>
+            The website that you are currently browsing is made using Vue.js on Webpack template. It gave me a lot of
+            experience on how Vue.js works and its powerful features!
+          </p>
+        </div>
+      </pro-card>
       <pro-card
         class="p-two"
         :class="{'animate-pro-cards': scrolled}"
         vId="2"
-        name="schedulearn"
-        :img="schedImg"
-      >me tow helllloooooo</pro-card>
+        name="murrayville"
+        :img="murrayImg"
+        link="https://www.murrayvillephysio.ca/"
+      >
+        <div class="toolsAndLink">
+          <p>
+            <strong>Tools used</strong>
+            <br>HTML, CSS, jQuery, Bootstrap v4
+          </p>
+          <p>
+            This is my first client website made for a clinic in Langley. I have used a lot of Bootstrap items and functionalities
+            like margins, paddings, containers, accordian, navbar etc.
+          </p>
+        </div>
+      </pro-card>
       <pro-card
         class="p-three"
         :class="{'animate-pro-cards': scrolled}"
         vId="3"
+        name="schedulearn"
+        :img="schedImg"
+        link="https://schedulearn.com/"
+      >
+        <div class="toolsAndLink">
+          <p>
+            <strong>Tools used</strong>
+            <br>HTML, CSS, jQuery, Bootstrap, Python, Django
+          </p>
+          <p>
+            A group project built by my friends and later included me as a front-end developer to build mobile friendly
+            interfaces and webpages (agenda, profile page etc.) for the website.
+          </p>
+        </div>
+      </pro-card>
+      <pro-card
+        class="p-four"
+        :class="{'animate-pro-cards': scrolled}"
+        vId="4"
         name="symphonia"
         :img="sympImg"
-      >i am threee</pro-card>
+        link="https://nppatel97.github.io/InfoVizProject/"
+      >
+        <div class="toolsAndLink">
+          <p>
+            <strong>Tools used</strong>
+            <br>HTML, CSS, jQuery, Bootstrap, Python, Zingchart
+          </p>
+          <p>
+            A school time group project built by me and my group mates. It analyzes different songs from a spotify playlist, displays
+            and compares them in visual charts
+          </p>
+        </div>
+      </pro-card>
     </div>
   </div>
 </template>
 
 <script>
 import card from "./projectCard.vue";
-import img1 from "../../assets/murrayville.png";
-import img2 from "../../assets/schedulearn.png";
-import img3 from "../../assets/symphonia.png";
+import img1 from "../../assets/personalSite.png";
+import img2 from "../../assets/murrayville.png";
+import img3 from "../../assets/schedulearn.png";
+import img4 from "../../assets/symphonia.png";
 export default {
   data() {
     return {
-      murrayImg: img1,
-      schedImg: img2,
-      sympImg: img3,
+      personal: img1,
+      murrayImg: img2,
+      schedImg: img3,
+      sympImg: img4,
       scrolled: false
     };
   },
@@ -46,7 +103,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      if (window.scrollY > 500) this.scrolled = true;
+      if (window.scrollY > 420) this.scrolled = true;
       // console.log(this.scrolled + window.scrollY);
     }
   },
@@ -75,6 +132,13 @@ h2 {
   grid-template-columns: repeat(auto-fit, 100%);
 }
 
+.toolsAndLink {
+  text-align: center;
+  p {
+    padding: 0.5em;
+  }
+}
+
 @keyframes slideSide {
   from {
     transform: translateX(-20px);
@@ -92,7 +156,8 @@ h2 {
 
 .p-one,
 .p-two,
-.p-three {
+.p-three,
+.p-four {
   opacity: 0;
 }
 
@@ -102,6 +167,10 @@ h2 {
 
 .p-three {
   animation-delay: 0.6s;
+}
+
+.p-four {
+  animation-delay: 0.9s;
 }
 
 @media (min-width: 880px) {
