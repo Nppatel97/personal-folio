@@ -15,7 +15,7 @@
         <a href="https://www.linkedin.com/in/nppatel97/">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="../../assets/Nisarg_Resume.pdf">
+        <a href="https://github.com/Nppatel97/personal-folio/blob/gh-pages/Nisarg_Patel_Resume.pdf">
           <i class="fas fa-file-pdf"></i>
         </a>
       </div>
