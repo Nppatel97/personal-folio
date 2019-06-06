@@ -1,83 +1,85 @@
 <template>
   <div id="project">
     <h2>My Works</h2>
-    <div class="card-container">
-      <pro-card
-        class="p-one"
-        :class="{'animate-pro-cards': scrolled}"
-        vId="1"
-        name="Personal Folio"
-        :img="personal"
-        link="https://github.com/Nppatel97/personal-folio"
-      >
-        <div class="toolsAndLink">
-          <p>
-            <strong>Tools used</strong>
-            <br>Vue.js v3, Webpack, Hosted on GitHub
-          </p>
-          <p>
-            The website that you are currently browsing is made using Vue.js on Webpack template. It gave me a lot of
-            experience on how Vue.js works and its powerful features!
-          </p>
-        </div>
-      </pro-card>
-      <pro-card
-        class="p-two"
-        :class="{'animate-pro-cards': scrolled}"
-        vId="2"
-        name="murrayville"
-        :img="murrayImg"
-        link="https://www.murrayvillephysio.ca/"
-      >
-        <div class="toolsAndLink">
-          <p>
-            <strong>Tools used</strong>
-            <br>HTML, CSS, jQuery, Bootstrap v4
-          </p>
-          <p>
-            This is my first client website made for a clinic in Langley. I have used a lot of Bootstrap items and functionalities
-            like margins, paddings, containers, accordian, navbar etc.
-          </p>
-        </div>
-      </pro-card>
-      <pro-card
-        class="p-three"
-        :class="{'animate-pro-cards': scrolled}"
-        vId="3"
-        name="schedulearn"
-        :img="schedImg"
-        link="https://schedulearn.com/"
-      >
-        <div class="toolsAndLink">
-          <p>
-            <strong>Tools used</strong>
-            <br>HTML, CSS, jQuery, Bootstrap, Python, Django
-          </p>
-          <p>
-            A group project built by my friends and later included me as a front-end developer to build mobile friendly
-            interfaces and webpages (agenda, profile page etc.) for the website.
-          </p>
-        </div>
-      </pro-card>
-      <pro-card
-        class="p-four"
-        :class="{'animate-pro-cards': scrolled}"
-        vId="4"
-        name="symphonia"
-        :img="sympImg"
-        link="https://nppatel97.github.io/InfoVizProject/"
-      >
-        <div class="toolsAndLink">
-          <p>
-            <strong>Tools used</strong>
-            <br>HTML, CSS, jQuery, Bootstrap, Python, Zingchart
-          </p>
-          <p>
-            A school time group project built by me and my group mates. It analyzes different songs from a spotify playlist, displays
-            and compares them in visual charts
-          </p>
-        </div>
-      </pro-card>
+    <div class="card-parent">
+      <div class="card-container">
+        <pro-card
+          class="p-one"
+          :class="{'animate-pro-cards': scrolled}"
+          vId="1"
+          name="Personal Folio"
+          :img="personal"
+          link="https://github.com/Nppatel97/personal-folio"
+        >
+          <div class="toolsAndLink">
+            <p>
+              <strong>Tools used</strong>
+              <br>Vue.js v3, Webpack, Hosted on GitHub
+            </p>
+            <p>
+              The website that you are currently browsing is made using Vue.js on Webpack template. It gave me a lot of
+              experience on how Vue.js works and its powerful features!
+            </p>
+          </div>
+        </pro-card>
+        <pro-card
+          class="p-two"
+          :class="{'animate-pro-cards': scrolled}"
+          vId="2"
+          name="murrayville"
+          :img="murrayImg"
+          link="https://www.murrayvillephysio.ca/"
+        >
+          <div class="toolsAndLink">
+            <p>
+              <strong>Tools used</strong>
+              <br>HTML, CSS, jQuery, Bootstrap v4
+            </p>
+            <p>
+              This is my first client website made for a clinic in Langley. I have used a lot of Bootstrap items and functionalities
+              like margins, paddings, containers, accordian, navbar etc.
+            </p>
+          </div>
+        </pro-card>
+        <pro-card
+          class="p-three"
+          :class="{'animate-pro-cards': scrolled}"
+          vId="3"
+          name="schedulearn"
+          :img="schedImg"
+          link="https://schedulearn.com/"
+        >
+          <div class="toolsAndLink">
+            <p>
+              <strong>Tools used</strong>
+              <br>HTML, CSS, jQuery, Bootstrap, Python, Django
+            </p>
+            <p>
+              A group project built by my friends outside school. My task was to build mobile friendly
+              interfaces and webpages for the website.
+            </p>
+          </div>
+        </pro-card>
+        <pro-card
+          class="p-four"
+          :class="{'animate-pro-cards': scrolled}"
+          vId="4"
+          name="symphonia"
+          :img="sympImg"
+          link="https://nppatel97.github.io/InfoVizProject/"
+        >
+          <div class="toolsAndLink">
+            <p>
+              <strong>Tools used</strong>
+              <br>HTML, CSS, jQuery, Bootstrap, Python, Zingchart
+            </p>
+            <p>
+              A school time group project built by me and my group mates. It analyzes different songs from a spotify playlist, displays
+              and compares them in visual charts
+            </p>
+          </div>
+        </pro-card>
+      </div>
     </div>
   </div>
 </template>
@@ -126,9 +128,16 @@ h2 {
   text-align: center;
 }
 
+.card-parent {
+  display: block;
+  // grid-template-columns: 0.5fr minmax(500px, 3fr) 0.5fr;
+}
+
 .card-container {
   padding-top: 1rem;
   display: grid;
+  grid-column: 2 / 3;
+  grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, 100%);
 }
 
@@ -175,8 +184,12 @@ h2 {
 
 @media (min-width: 880px) {
   .card-container {
-    padding: 1rem 11rem;
-    grid-template-columns: repeat(auto-fit, 24.9vw);
+    grid-template-columns: repeat(auto-fit, 355px);
+  }
+
+  .card-parent {
+    display: grid;
+    grid-template-columns: 0.5fr minmax(500px, 3fr) 0.5fr;
   }
 
   #project h2 {

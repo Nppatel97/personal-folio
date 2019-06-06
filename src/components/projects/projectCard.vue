@@ -1,11 +1,11 @@
 <template>
   <div id="proCards">
-    <div class="card-body" :style="{background: bgImg}">
+    <div class="card-body">
+      <img :src="`${this.img}`" alt="Project Image">
       <div class="num-img">
         <div class="number">
           <div class="num-txt">{{vId}}</div>
         </div>
-        <!-- <img :src="img" alt="Project Image"> -->
         <div class="project-name">{{name}}</div>
       </div>
       <p>
@@ -35,27 +35,31 @@ export default {
 
 <style lang="scss">
 .card-body {
-  margin-top: 1em;
-  margin: 1em auto;
-  width: 90%;
-  height: fit-content;
+  width: inherit;
+  height: 324px;
+  background: linear-gradient(
+      170deg,
+      rgb(87, 62, 31),
+      burlywood,
+      rgb(133, 97, 51)
+    )
+    fixed;
   background-size: cover;
 
   img {
     width: 100%;
-    height: 120px;
-    margin-left: -50px;
-    z-index: 3;
-    transform: scale(0, 1);
     transition: 0.3s ease;
-    transform-origin: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   p {
     padding: 1em;
     padding-bottom: 2em;
     background: white;
-    transform: scale(1, 0) translateY(-50px);
+    transform: translateY(50px);
+    opacity: 0;
     transform-origin: top;
     transition: 0.3s ease-in-out;
   }
@@ -89,14 +93,15 @@ export default {
   color: white;
   font-weight: bolder;
   font-size: 23px;
-  width: 90%;
+  width: 100%;
   z-index: 3;
   transform: scale(0, 1);
   transition: 0.3s ease;
   transform-origin: right;
-  background: url("../../assets/burly.jpg");
+  background: url("../../assets/burly.jpg") no-repeat;
+  background-size: cover;
   padding: 1.8em 0;
-  padding-left: 5em;
+  padding-left: 5.5em;
 }
 
 .card-body:hover .project-name {
@@ -142,16 +147,12 @@ export default {
 }
 
 .card-body:hover p {
-  transform: scale(1, 1) translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .card-body:hover button {
   transform: translateY(0);
   opacity: 1;
-}
-
-.upside {
-  transform: rotate(180deg);
-  transition: transform 0.5 cubic-bezier(1, 0, 0, 1);
 }
 </style>
