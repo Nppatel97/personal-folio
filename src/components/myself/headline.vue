@@ -3,12 +3,12 @@
     <div class="background">.</div>
     <div class="about-content">
       <div class="img">
-        <img src="../../assets/meImg.jpg" alt="My image" height="150" width="150">
+        <img src="../../assets/meImg.jpg" alt="My image" height="150" width="150" />
       </div>
       <div class="desc">
         Passionate Web Developer with experience in Web Dev tools like HTML5, CSS/SASS, JavaScript, Vue, React and Java
-        <br>
-        <br>
+        <br />
+        <br />
         <a href="https://github.com/Nppatel97">
           <i class="fab fa-github"></i>
         </a>
@@ -32,25 +32,8 @@ export default {};
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Kalam|Raleway");
 
-$primary-clr: #b2fdb3;
-$primary-bg-clr: rgba(178, 253, 179, 0.9);
-$secondary-clr: #22b14c;
-$secondary-bg-clr: rgba(34, 177, 77, 1);
 $clr-dark: #272727;
-
-a {
-  text-decoration: none !important;
-  color: $clr-dark;
-  font-size: 1.7em;
-
-  &:nth-child(4) {
-    margin: 0 0.3em;
-  }
-
-  &:hover {
-    color: burlywood;
-  }
-}
+$link-clr: rgb(87, 62, 31);
 
 .background {
   position: absolute;
@@ -80,6 +63,19 @@ a {
   font-family: "Kalam", cursive;
   background: whitesmoke;
   padding-bottom: 2rem;
+  a {
+    text-decoration: none !important;
+    color: $clr-dark;
+    font-size: 1.7em;
+
+    &:nth-child(4) {
+      margin: 0 0.3em;
+    }
+
+    &:hover {
+      color: $link-clr;
+    }
+  }
 }
 
 @media (min-width: 880px) {

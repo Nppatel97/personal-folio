@@ -1,7 +1,7 @@
 <template>
   <div id="proCards">
     <div class="card-body">
-      <img :src="`${this.img}`" alt="Project Image">
+      <img :src="`${this.img}`" alt="Project Image" />
       <div class="num-img">
         <div class="number">
           <div class="num-txt">{{vId}}</div>
@@ -36,12 +36,12 @@ export default {
 <style lang="scss">
 .card-body {
   width: inherit;
-  height: 324px;
+  // height: 324px;
   background: linear-gradient(
-      170deg,
+      180deg,
       rgb(87, 62, 31),
-      burlywood,
-      rgb(133, 97, 51)
+      rgb(87, 62, 31),
+      burlywood
     )
     fixed;
   background-size: cover;

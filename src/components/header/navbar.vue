@@ -2,19 +2,14 @@
   <div id="header" :style="{backgroundColor: bgColor}">
     <div class="logo">
       <a href="#">
-        <img src="../../assets/npLogo.png" class="img" width="50" height="50">
+        <img src="../../assets/npLogo.png" width="50" height="50" />
         <h1>Nisarg Patel</h1>
       </a>
     </div>
 
-    <input type="checkbox" id="navToggle" class="navi-toggle">
+    <input type="checkbox" id="navToggle" class="navi-toggle" />
     <nav>
       <ul>
-        <li>
-          <a href="#about">
-            <i class="fas fa-grin-alt icon"></i>About
-          </a>
-        </li>
         <li>
           <a href="#skills">
             <i class="fas fa-code icon"></i>
@@ -25,6 +20,11 @@
           <a href="#project">
             <i class="fas fa-tasks icon"></i>
             Projects
+          </a>
+        </li>
+        <li>
+          <a href="#sideWork">
+            <i class="fas fa-grin-alt icon"></i>Side Works
           </a>
         </li>
         <li>
@@ -46,18 +46,15 @@ export default {
   data() {
     return {
       scrolled: false,
-      bgColor: "transparent",
-      clicked: false
+      bgColor: "transparent"
     };
   },
   methods: {
-    closeNavbar() {},
     handleScroll() {
       this.scrolled = window.scrollY > 10;
       this.scrolled
         ? (this.bgColor = "rgba(39, 39, 39, 1)")
         : (this.bgColor = "transparent");
-      // console.log(this.scrolled);
     }
   },
   created() {
@@ -174,7 +171,7 @@ nav {
   }
 
   span {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -228,6 +225,7 @@ nav {
   #header {
     display: grid;
     grid-template-columns: 0.5fr auto minmax(600px, 3fr) 0.5fr;
+    background: rgba(39, 39, 39, 0.9);
   }
 
   .logo {

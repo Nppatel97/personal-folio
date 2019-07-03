@@ -5,6 +5,9 @@
     <my-desc></my-desc>
     <my-skills></my-skills>
     <my-projects></my-projects>
+    <my-sideworks></my-sideworks>
+    <my-contact></my-contact>
+    <my-footer></my-footer>
   </div>
 </template>
 
@@ -14,6 +17,9 @@ import myTag from "./components/myself/headline.vue";
 import myself from "./components/myself/myIntro.vue";
 import skills from "./components/myself/skills.vue";
 import project from "./components/projects/project.vue";
+import sideWork from "./components/sideStuff/sideWorks.vue";
+import contact from "./components/contact/contact.vue";
+import footer from "./components/footer/footer.vue";
 
 export default {
   components: {
@@ -21,7 +27,10 @@ export default {
     aboutMe: myTag,
     myDesc: myself,
     mySkills: skills,
-    myProjects: project
+    myProjects: project,
+    mySideworks: sideWork,
+    myContact: contact,
+    myFooter: footer
   }
 };
 </script>
@@ -29,12 +38,8 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Kalam|Raleway");
 
-$primary-clr: #b2fdb3;
-$primary-bg-clr: rgba(178, 253, 179, 0.9);
-$secondary-clr: #22b14c;
-$secondary-bg-clr: rgba(34, 177, 77, 0.95);
 $clr-dark: #272727;
-
+$link-clr: rgb(87, 62, 31);
 *,
 *::before,
 *::after {
@@ -46,9 +51,11 @@ $clr-dark: #272727;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden !important;
 }
 </style>
