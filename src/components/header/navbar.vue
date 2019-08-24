@@ -240,8 +240,10 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: auto;
 
     a {
+      font-size: 1em;
       opacity: 1;
       position: relative;
 
@@ -265,11 +267,13 @@ nav {
     }
 
     ul {
+      all: unset;
       display: flex;
       margin-bottom: 0;
     }
 
     li {
+      all: unset;
       margin-left: 2.3em;
       margin-bottom: 0;
       margin-top: 0;
