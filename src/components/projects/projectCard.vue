@@ -1,7 +1,7 @@
 <template>
   <div id="proCards">
     <div class="card-body">
-      <img :src="`${this.img}`" alt="Project Image" />
+      <img :src="`${this.img}`" :style="{top: `${topi}%`}" alt="Project Image" />
       <div class="num-img">
         <div class="number">
           <div class="num-txt">{{vId}}</div>
@@ -27,14 +27,32 @@ export default {
   props: ["vId", "name", "img", "link"],
   data() {
     return {
-      bgImg: `url(${this.img}) no-repeat`
+      bgImg: `url(${this.img}) no-repeat`,
+      scrolled: false,
+      topi: 5
     };
+  },
+  methods: {
+    handleScrollImg() {
+      this.scrolled = window.scrollY > 0;
+      const scrolly = Math.floor(window.scrollY / -20) + 130;
+      this.topi = scrolly;
+      // console.log(this.topi);
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScrollImg);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScrollImg);
   }
 };
 </script>
 
 <style lang="scss">
 .card-body {
+  position: relative;
+  overflow: hidden;
   width: inherit;
   // height: 324px;
   background: linear-gradient(
@@ -48,7 +66,7 @@ export default {
 
   img {
     width: 100%;
-    transition: 0.3s ease;
+    // transition: 0.3s ease;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

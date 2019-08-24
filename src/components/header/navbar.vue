@@ -1,5 +1,6 @@
 <template>
   <div id="header" :style="{backgroundColor: bgColor}">
+    <input type="checkbox" id="navToggle" class="navi-toggle" />
     <div class="logo">
       <a href="#">
         <img src="../../assets/npLogo.png" width="50" height="50" />
@@ -7,7 +8,6 @@
       </a>
     </div>
 
-    <input type="checkbox" id="navToggle" class="navi-toggle" />
     <nav>
       <ul>
         <li>
@@ -109,21 +109,23 @@ $clr-dark: #272727;
 
 nav {
   position: absolute;
-  text-align: right;
-  top: 100%;
+  text-align: center;
+  top: 0%;
   left: 0;
   background: linear-gradient(to bottom, $clr-dark, $secondary-bg-clr);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  height: 100vh;
 
   ul {
     list-style: none;
+    margin: 12rem 1rem 0 0;
   }
 
   li {
-    margin: 1em;
+    margin: 5rem 2rem 0 0;
   }
 
   .icon {
@@ -136,7 +138,7 @@ nav {
   a {
     color: whitesmoke;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
