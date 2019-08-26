@@ -14,7 +14,7 @@
           <div class="toolsAndLink">
             <p>
               <strong>Tools used</strong>
-              <br>Vue.js v3, Webpack, Hosted on GitHub
+              <br />Vue.js v3, Webpack, Hosted on GitHub
             </p>
             <p>
               The website that you are currently browsing is made using Vue.js on Webpack template. It gave me a lot of
@@ -33,7 +33,7 @@
           <div class="toolsAndLink">
             <p>
               <strong>Tools used</strong>
-              <br>HTML, CSS, jQuery, Bootstrap v4
+              <br />HTML, CSS, jQuery, Bootstrap v4
             </p>
             <p>
               This is my first client website made for a clinic in Langley. I have used a lot of Bootstrap items and functionalities
@@ -52,7 +52,7 @@
           <div class="toolsAndLink">
             <p>
               <strong>Tools used</strong>
-              <br>HTML, CSS, jQuery, Bootstrap, Python, Django
+              <br />HTML, CSS, jQuery, Bootstrap, Python, Django
             </p>
             <p>
               A group project built by my friends outside school. My task was to build mobile friendly
@@ -71,7 +71,7 @@
           <div class="toolsAndLink">
             <p>
               <strong>Tools used</strong>
-              <br>HTML, CSS, jQuery, Bootstrap, Python, Zingchart
+              <br />HTML, CSS, jQuery, Bootstrap, Python, Zingchart
             </p>
             <p>
               A school time group project built by me and my group mates. It analyzes different songs from a spotify playlist, displays

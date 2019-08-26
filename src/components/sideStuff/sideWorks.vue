@@ -1,15 +1,38 @@
 <template>
   <div id="sideWork">
     <h2>Side Works</h2>
-    <div class="side-card-parent">
-      <div class="side-card-container">
-        <pro-card
-          :class="{'animate-pro-cards': scrolled}"
-          vId="1"
-          name="Personal Folio"
-          :img="personal"
-          link="https://github.com/Nppatel97/personal-folio"
-        ></pro-card>
+    <div class="sw-box">
+      <div id="swOne">
+        <img src="../../assets/ssGif.gif" alt />
+        <div class="gif-overlay">
+          <div>
+            <h3>Slide Show</h3>
+            <br />
+            <br />
+            <br />
+            <a href="https://codepen.io/Nppatel97/pen/KLOgvg">
+              <i class="fab fa-codepen"></i>
+              <br />
+              <small>View in Codepen</small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="swTwo">
+        <img src="../../assets/tttGif.gif" alt />
+        <div class="gif-overlay">
+          <div>
+            <h3>Tic Tac Toe</h3>
+            <br />
+            <br />
+            <br />
+            <a href="https://codepen.io/Nppatel97/pen/rEPbzj">
+              <i class="fab fa-codepen"></i>
+              <br />
+              <small>View in Codepen</small>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -23,19 +46,20 @@ export default {};
 $clr-dark: #272727;
 $link-clr: rgb(87, 62, 31);
 #sideWork {
-  padding: 2rem 0.5rem;
+  margin-bottom: 1.5rem;
+  h2 {
+    padding: 0.5rem;
+  }
 }
 
 .side-card-parent {
   display: block;
-  // grid-template-columns: 0.5fr minmax(500px, 3fr) 0.5fr;
 }
 
 .side-card-container {
   padding-top: 1rem;
   display: grid;
   grid-column: 2 / 3;
-  // grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, 100%);
 }
 
@@ -54,6 +78,69 @@ $link-clr: rgb(87, 62, 31);
   animation: slideSide 0.3s ease-in forwards;
 }
 
+.sw-box {
+  width: 100vw;
+  margin-top: 1em;
+  justify-content: center;
+
+  img {
+    height: 100%;
+  }
+}
+
+#swOne,
+#swTwo {
+  position: relative;
+}
+
+.gif-overlay {
+  position: absolute;
+  background: linear-gradient(
+    to top,
+    black,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.5)
+  );
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 101%;
+  transform: scale(1, 0);
+  transition: 0.3s ease;
+  text-align: center;
+  transform-origin: bottom;
+
+  div {
+    position: absolute;
+    color: white;
+    padding: 50px;
+    width: 300px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+  }
+
+  svg {
+    font-size: 2em;
+    transition: 0.3s ease;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover svg {
+    transform: translateY(-10px);
+  }
+}
+
+#swOne:hover .gif-overlay,
+#swTwo:hover .gif-overlay {
+  transform: scale(1, 1);
+}
+
 @media (min-width: 880px) {
   .side-card-container {
     grid-template-columns: repeat(auto-fit, 355px);
@@ -67,6 +154,11 @@ $link-clr: rgb(87, 62, 31);
   #sideWork h2 {
     text-align: left;
     padding-left: 11rem;
+  }
+
+  .sw-box {
+    display: inline-flex;
+    justify-content: center;
   }
 }
 </style>

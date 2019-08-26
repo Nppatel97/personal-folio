@@ -121,7 +121,7 @@ nav {
 
   ul {
     list-style: none;
-    margin: 12rem 1rem 0 0;
+    margin: 5rem 1rem 0 0;
   }
 
   li {

@@ -66,14 +66,21 @@ $link-clr: rgb(87, 62, 31);
   a {
     text-decoration: none !important;
     color: $clr-dark;
-    font-size: 1.7em;
+    padding: 5px;
+    margin: 0 0.5em;
 
     &:nth-child(4) {
       margin: 0 0.3em;
     }
 
-    &:hover {
-      color: $link-clr;
+    svg {
+      font-size: 1.7em;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $link-clr;
+        transform: translateY(-10px);
+      }
     }
   }
 }
@@ -108,6 +115,10 @@ $link-clr: rgb(87, 62, 31);
   a {
     text-decoration: none !important;
     color: white;
+
+    svg {
+      color: white;
+    }
   }
 }
 </style>

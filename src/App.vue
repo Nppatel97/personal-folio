@@ -6,7 +6,6 @@
     <my-skills></my-skills>
     <my-projects></my-projects>
     <my-sideworks></my-sideworks>
-    <my-contact></my-contact>
     <my-footer></my-footer>
   </div>
 </template>
@@ -18,7 +17,6 @@ import myself from "./components/myself/myIntro.vue";
 import skills from "./components/myself/skills.vue";
 import project from "./components/projects/project.vue";
 import sideWork from "./components/sideStuff/sideWorks.vue";
-import contact from "./components/contact/contact.vue";
 import footer from "./components/footer/footer.vue";
 
 export default {
@@ -29,7 +27,6 @@ export default {
     mySkills: skills,
     myProjects: project,
     mySideworks: sideWork,
-    myContact: contact,
     myFooter: footer
   }
 };
