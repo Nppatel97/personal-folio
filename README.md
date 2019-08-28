@@ -1,29 +1,18 @@
-# personal-folio
+# My Personal Website
 
-## Project setup
-```
-npm install
-```
+Made my own website using Vue.js to practice the framework.
+The site can be viewed on https://nppatel97.github.io/personal-folio/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Projects
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Schedulearn: https://schedulearn.com/
+2. Murrayville: https://www.murrayvillephysio.ca/
 
-### Run your tests
-```
-npm run test
-```
+# Resume
 
-### Lints and fixes files
-```
-npm run lint
-```
+https://github.com/Nppatel97/personal-folio/blob/master/src/assets/Nisarg%20Patel_Resume.pdf
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Contact Links
+
+1. Linkedin: https://www.linkedin.com/in/nppatel97/
+2. Codepen: https://codepen.io/Nppatel97
