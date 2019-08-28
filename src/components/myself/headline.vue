@@ -16,7 +16,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
         <a
-          href="https://github.com/Nppatel97/personal-folio/blob/master/src/assets/Nisarg_Patel_Resume.pdf"
+          href="https://github.com/Nppatel97/personal-folio/blob/master/src/assets/Nisarg%20Patel_Resume.pdf"
         >
           <i class="fas fa-file-pdf"></i>
         </a>
